@@ -15,7 +15,6 @@ import {
   ScrollView,
   Image,
   Button,
-  Alert,
 } from 'react-native';
 
 import styles from './asset/style';
@@ -31,15 +30,17 @@ const App = () => {
             </Text>
             <Image
               source={{uri: 'https://reactnative.dev/docs/assets/p_cat2.png'}}
-              style={{width: 200, height: 200}}
+              style={styles.logo}
             />
             <TextInput style={styles.inputText} placeholder="Username" />
-            <TextInput style={styles.inputText} placeholder="Password" />
-            <Button
-              title="Press me"
-              color="#f194ff"
-              onPress={() => Alert.alert('Button with adjusted color pressed')}
+            <TextInput
+              secureTextEntry={true}
+              style={styles.inputText}
+              placeholder="Password"
             />
+            <View style={styles.buttonMain}>
+              <Button title="Login" />
+            </View>
           </View>
         </ScrollView>
       </SafeAreaView>

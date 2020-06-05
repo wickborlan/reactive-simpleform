@@ -2,14 +2,22 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'pink',
     padding: 10,
-    margin: 2,
+    margin: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'black',
   },
 
   fontColor: {
-    color: 'red',
+    color: 'black',
     textAlign: 'center',
+  },
+
+  logo: {
+    height: 200,
+    width: 200,
   },
 
   headingTitle: {
@@ -18,10 +26,23 @@ const styles = StyleSheet.create({
   },
 
   inputText: {
-    padding: 5,
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingLeft: 10,
     borderColor: 'black',
     borderWidth: 1,
     marginBottom: 10,
+    borderRadius: 5,
+    width: '100%',
+    flexDirection: 'row',
+  },
+
+  buttonMain: {
+    borderRadius: 5,
+    marginTop: 15,
+    backgroundColor: 'red',
+    color: 'white',
+    alignSelf: 'stretch',
   },
 });
 
