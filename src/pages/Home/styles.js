@@ -6,8 +6,6 @@ const styles = StyleSheet.create({
     margin: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 1,
-    borderColor: 'black',
   },
 
   fontColor: {
@@ -37,12 +35,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
 
-  buttonMain: {
-    borderRadius: 10,
-    marginTop: 15,
-    backgroundColor: 'red',
-    color: 'white',
+  buttonItem: {
+    alignItems: 'center',
+    backgroundColor: '#f4511e',
+    borderRadius: 20,
+    padding: 10,
+    paddingLeft: 20,
+    paddingRight: 20,
     alignSelf: 'stretch',
+  },
+
+  buttonText: {
+    color: '#ffffff',
   },
 });
 

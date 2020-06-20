@@ -6,45 +6,28 @@
  * @flow strict-local
  */
 
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {
-  Text,
-  View,
-  TextInput,
-  SafeAreaView,
-  ScrollView,
-  Image,
-  Button,
-} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import Landing from './pages/Landing';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
 
-import styles from './asset/style';
-
+const Stack = createStackNavigator();
 const App = () => {
   return (
-    <View>
-      <SafeAreaView>
-        <ScrollView>
-          <View style={[styles.container, styles.fontColor]}>
-            <Text style={[styles.fontColor, styles.headingTitle]}>
-              Lambe Turah App
-            </Text>
-            <Image
-              source={{uri: 'https://reactnative.dev/docs/assets/p_cat2.png'}}
-              style={styles.logo}
-            />
-            <TextInput style={styles.inputText} placeholder="Username" />
-            <TextInput
-              secureTextEntry={true}
-              style={styles.inputText}
-              placeholder="Password"
-            />
-            <View style={styles.buttonMain}>
-              <Button title="Login" />
-            </View>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Landing"
+          component={Landing}
+          options={{title: 'Welcome'}}
+        />
+        <Stack.Screen name="Home" component={Home} options={{title: 'Login'}} />
+        <Stack.Screen name="Profile" component={Profile} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
